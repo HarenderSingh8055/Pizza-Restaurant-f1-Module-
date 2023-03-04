@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+/* font-family: 'Quattrocento', serif; */
+:root {
+    --red-color: #F24C4C;
+    --yellow-color: #F2C94C;
+  }
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ruda', sans-serif;
+    background: #1E1E1E;
+}
+
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.sectionWidth{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.heading{
+    font-family: 'Quattrocento', serif;
+    font-weight: 400;
+    font-size: 60px;  
+    position: relative; 
+    text-align: center;
+    margin-bottom: 80px;
+    color: #fff;
+}
+.heading::before{
+    content: "";
+    height: 10px;
+    background: #B62828;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%,-50%);
+}
+
+/************HEADER CSS STARTED*************/
+header {
+    height: 110px;
+    background: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.navbar .navContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .navContent h2{
+    font-weight: 700;
+    font-size: 29px;
+    letter-spacing: 0.06em;
+}
+.navbar .navContent .menuItems ul {
+    display: flex;
+    align-items: center;
+}
+.navbar .navContent .menuItems ul li{
+    padding: 0 15px;
+}
+.navbar .navContent .menuItems ul li a{
+    color: #fff;
+}
+.navbar .navContent .mobileBtn{
+    display: none;
+}
+.socialWrapper {
+    display: flex;
+    align-items: center;
+}
+.socialWrapper a{
+    display: inline-block;
+    padding: 0 5px;
+}
+.socialWrapper a:last-child{
+    padding-right: 0;
+}
+
+.mobileMenu{
+    background: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: none;
+    transition:all 2s;
+}
+.mobileMenu.active {
+    display: block;
+}
+.mobileMenuItems ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+}
+.mobileMenuItems ul li a{
+    color: #fff;
+}
+
+/************HERO SECTION CSS STARTED*************/
+
+.heroSection{
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4) ),url("../images/hero-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heroSection .heroContent{
+    padding: 140px 0;
+    width: 50%;
+    margin-right: auto;
+}
+.heroSection .heroContent h1{
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 0.09em;
+    color: #fff;
+    font-family: 'Quattrocento', serif;
+    padding-bottom: 78px;
+    position: relative;
+}
+.heroSection .heroContent h1::after{
+    content: "";
+    height: 13px;
+    background: #F24C4C;
+    box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.heroSection .heroContent p{
+    padding-top: 70px;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+    color: #fff;
+    padding-bottom: 70px;
+}
+
+/************ABOUT US SECTION CSS STARTED*************/
+
+.aboutSection{
+    padding: 90px 15px;
+    color: #fff;
+}
+
+.aboutContent{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.aboutContent .leftContent{
+    flex-basis: 50%;
+}
+.aboutContent .leftContent p{
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+    position: relative;
+}
+.aboutContent .leftContent p::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    height: 4px;
+    background: #F24C4C;
+    box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.25);
+    width: 80%;
+}
+.aboutContent .rightContent{
+    flex-basis: 50%;
+}
+.aboutContent .rightContent img{
+    max-width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 74.48%, rgba(0, 0, 0, 0.8) 100%), url(.jpg);
+    border-radius: 10px;
+}
+
+/************MENU SECTION CSS STARTED*************/
+.menuSection {
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.menuSection .heading{
+    margin-bottom: 50px;
+}
+.menuSection h2 + p{
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+    margin-bottom: 90px;
+}
+.menuCardWrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 52px;
+}
+.menuCardWrapper .menuCard{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+.menuCardWrapper .menuCard .image{
+    flex-basis: 40%;
+}
+.menuCardWrapper .menuCard .image img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+.menuCardWrapper .menuCard .cardContent{
+    flex-basis: 60%;
+}
+.menuCardWrapper .menuCard .cardContent h4{
+    font-weight: 400;
+    font-size: 28px;
+    color: #F2C94C;
+    margin: 10px 0 8px 0;
+}
+.menuCardWrapper .menuCard .cardContent p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+}
+
+/************FIND US SECTION CSS STARTED*************/
+
+.findSection{
+    padding: 100px 15px 100px 15px;;
+    color: #fff;
+}
+.findContent{
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+.findContent .leftContent, .findContent .rightContent{
+    flex-basis: 50%;
+}
+.findContent .leftContent p{
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+    margin-bottom: 40px;
+}
+.findContent .leftContent ul li{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.findContent .leftContent ul li span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+}
+.findContent .rightContent iframe{
+    width: 100%;
+    height: 400px;
+} 
+
+/************FOOTER CSS STARTED*************/
+
+.footerSection{
+    padding-top:150px ;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    color: #fff;
+}
+
+.footerSection ul li{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.footerSection ul li{
+    padding-right: 200px;
+}
+.footerSection ul li span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.09em;
+}
+
+
+/************RESPONSIVE CSS STARTED*************/
+@media (max-width:1400px){
+    .sectionWidth{
+        max-width: 1140px;
+    }
+    .heroSection .heroContent h1{
+        font-size: 75px;
+        line-height: 85px;
+    }
+    .heroSection .heroContent p{
+        font-size: 22px;
+    }
+    .menuCardWrapper .menuCard .cardContent p{
+        font-size: 18px;
+        line-height: 30px;
+    }     
+}
+@media (max-width:1200px){
+    .sectionWidth{
+        max-width: 960px;
+    }
+    .heading{
+        font-size: 50px;  
+    }
+    .heading::before{
+        height: 8px;
+    }
+    .navbar .navContent h2{
+        font-size: 24px;
+    }
+    .navbar .navContent .menuItems ul li{
+        padding: 0 10px;
+    }
+    .socialWrapper a{
+        padding: 0 2px;
+    }
+    .heroSection .heroContent{
+        width: 70%;
+        padding: 75px 0;
+    }
+    .aboutContent .leftContent p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .menuSection h2 + p{
+        font-size: 22px;
+        text-align: center;
+    }
+    .menuCardWrapper .menuCard .cardContent h4 {
+        font-size: 24px;
+        margin: 5px 0 8px 0;
+    }
+    .menuCardWrapper .menuCard .cardContent p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .findContent .leftContent p {
+        font-size: 21px;
+        line-height: 37px;
+    }
+    .findContent .leftContent ul li span{
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .footerSection{
+        padding-top: 80px;
+    }
+}
+@media (max-width:992px){
+    .heading{
+        font-size: 45px;  
+    }
+    .heading::before{
+        height: 7px;
+    }
+    .sectionWidth{
+        max-width: 720px;
+    }
+    header{
+        height: 75px;
+    }
+    .navbar .navContent .mobileBtn{
+        display: block;
+    }
+    .navbar .navContent .menuItems{
+        display: none;
+    }
+    .navbar .navContent .socialWrapper{
+        display: none;
+    }
+
+
+    .heroSection .heroContent{
+        width: 80%;
+    }
+    .heroSection .heroContent h1{
+        padding-bottom: 50px;
+    }
+    .heroSection .heroContent p{
+        padding-top: 40px;
+        font-size: 20px;
+        line-height: 35px;
+        padding-bottom: 0px;
+    }
+    .aboutContent{
+        gap: 20px;
+    }
+    .aboutContent .leftContent p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .menuSection h2 + p{
+        font-size: 18px;
+        line-height: 33px;
+        margin-bottom: 60px;
+    }
+    .menuCardWrapper{
+        gap: 25px;
+    }
+    .menuCardWrapper .menuCard .cardContent h4 {
+        font-size: 18px;
+        margin: 2px 0 3px 0;
+    }
+    .menuCardWrapper .menuCard{
+        gap: 10px;
+    }
+    .menuCardWrapper .menuCard .cardContent p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .findSection {
+        padding: 60px 15px 60px 15px;
+    }
+    .findContent .leftContent p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .findContent .leftContent ul li img{
+        width: 50px;
+        height: 50px;
+    }
+    .findContent .leftContent ul li span {
+        font-size: 15px;
+        line-height: 27px;
+    }
+    .findContent .rightContent iframe{
+        height: 310px;
+    }
+    .footerSection ul li{
+        padding-right: 0;
+    }
+}
+@media (max-width:767px){
+    .sectionWidth{
+        max-width: 100%
+    }
+
+
+
+
+
+    .heroSection .heroContent{
+        width: 100%;
+    }
+    .heroSection .heroContent h1 {
+        font-size: 45px;
+        line-height: 56px;
+        padding-bottom: 25px;
+    }
+    .heroSection .heroContent p {
+        padding-top: 20px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .heroSection .heroContent h1::after{
+        height: 8px;
+    }    
+    .aboutContent{
+        flex-direction: column;
+    }
+    .menuCardWrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .findContent .leftContent, .findContent .rightContent{
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .findContent .leftContent ul li img {
+        width: 40px;
+        height: 40px;
+    }
+    .findContent .leftContent ul li{
+        gap: 10px;
+    }
+    .findContent{
+        flex-direction: column;
+    }
+    .footerSection{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
